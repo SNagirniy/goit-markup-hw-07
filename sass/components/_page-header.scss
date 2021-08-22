@@ -1,0 +1,90 @@
+/*перелаштовує на flex елементи всередині heaer*/
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+/*Навігація сайту*/
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav__link {
+  display: block;
+  padding: 32px 0;
+
+  color: $secondary;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $transParam;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus {
+  color: $accent;
+}
+.site-nav__link--curent {
+  position: relative;
+  color: $accent;
+}
+
+.site-nav__link--curent::after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+
+  content: "";
+  width: 100%;
+  height: 4px;
+
+  background-color: $accent;
+  border-radius: 2px;
+}
+
+/*Контакти*/
+
+.header-contact {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-contact__link {
+  display: flex;
+  align-items: center;
+
+  color: $primary-text;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color $transParam;
+}
+
+.header-contact__link:hover,
+.header-contact__link:focus {
+  color: $accent;
+}
+
+.header-contact__item:first-child {
+  margin-right: 50px;
+}
+.header-contact__icon {
+  fill: $primary-text;
+  margin-right: 10px;
+
+  transition: fill $transParam;
+}
+.header-contact__link:hover .header-contact__icon {
+  fill: $accent;
+}
