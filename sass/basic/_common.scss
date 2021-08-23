@@ -1,7 +1,7 @@
 body {
   font-family: $primary-font;
-  background-color: var(--primary-bgc);
-  color: var(--primary-text-color);
+  background-color: $primary-bgc;
+  color: $primary-text;
   font-size: 14px;
   letter-spacing: 0.03em;
 }
@@ -25,6 +25,11 @@ img {
   max-width: 100%;
 }
 
+/*Прибирає маркери списку*/
+ul {
+  list-style: none;
+}
+
 /*параметри контейнера*/
 .container {
   margin-left: auto;
@@ -40,7 +45,31 @@ img {
   padding-top: 94px;
 }
 
-/*Прибирає маркери списку*/
-.list {
-  list-style: none;
+/*Заголовки секцій*/
+.section-title {
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $secondary;
+}
+
+/*приховує заголовок секції*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
